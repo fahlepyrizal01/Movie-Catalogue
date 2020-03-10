@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Favorite Movies</string>
+    <string name="text_movies">Movies</string>
+    <string name="text_tv_series">TV Series</string>
+    <string name="text_imageview_movie_poster">ImageView Movie Poster</string>
+    <string name="text_favorite_not_found">Favorite not found</string>
+</resources>

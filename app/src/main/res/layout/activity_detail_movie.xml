@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activity.detailmovie.DetailMovieActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetail"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        app:title="@string/text_movie_details"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/size_10dp"
+            android:paddingTop="@dimen/size_20dp"
+            android:paddingEnd="@dimen/size_10dp"
+            android:paddingBottom="@dimen/size_20dp">
+
+            <ImageView
+                android:id="@+id/imageViewPosterValue"
+                android:layout_width="@dimen/size_150dp"
+                android:layout_height="@dimen/size_0dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewLanguageValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewTitleTitle"
+                tools:ignore="RtlSymmetry"
+                android:contentDescription="@string/text_imageview_movie_poster" />
+
+            <TextView
+                android:id="@+id/textViewTitleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:text="@string/text_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTitleValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleTitle" />
+
+            <TextView
+                android:id="@+id/textViewTitleID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_id"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleValue" />
+
+            <TextView
+                android:id="@+id/textViewIDValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleID" />
+
+            <TextView
+                android:id="@+id/textViewTitleVoteAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_vote_average"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIDValue" />
+
+            <TextView
+                android:id="@+id/textViewVoteAverageValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleVoteAverage" />
+
+            <TextView
+                android:id="@+id/textViewTitleVoteCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_vote_count"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVoteAverageValue" />
+
+            <TextView
+                android:id="@+id/textViewVoteCountValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleVoteCount" />
+
+            <TextView
+                android:id="@+id/textViewTitleLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_language"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVoteCountValue" />
+
+            <TextView
+                android:id="@+id/textViewLanguageValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitleTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleLanguage" />
+
+            <TextView
+                android:id="@+id/textViewTitleDate"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:text="@string/text_date"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPosterValue" />
+
+            <TextView
+                android:id="@+id/textViewDateValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/date/mmddyy"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleDate" />
+
+            <TextView
+                android:id="@+id/textViewTitleRunTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_run_time"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDateValue" />
+
+            <TextView
+                android:id="@+id/textViewRunTimeValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleRunTime" />
+
+            <TextView
+                android:id="@+id/textViewTitlePopularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/text_popularity"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRunTimeValue" />
+
+            <TextView
+                android:id="@+id/textViewPopularityValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitlePopularity" />
+
+            <TextView
+                android:id="@+id/textViewTitleOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_overview"
+                android:paddingTop="@dimen/size_5dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPopularityValue" />
+
+            <TextView
+                android:id="@+id/textViewOverviewValue"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitleValue"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageViewPosterValue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitleOverview"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="@tools:sample/lorem/random" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBarDetailMovie"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

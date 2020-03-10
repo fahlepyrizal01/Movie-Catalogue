@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="text_title">Judul :</string>
+    <string name="text_date">Tanggal :</string>
+    <string name="text_run_time">Durasi :</string>
+    <string name="text_overview">Sinopsis :</string>
+    <string name="text_language">Bahasa :</string>
+    <string name="text_movie_details">Rincian Film</string>
+    <string name="text_movies">Film</string>
+    <string name="text_tv_series">Serial TV</string>
+    <string name="text_setting">Pengaturan</string>
+    <string name="text_imageview_movie_poster">ImageView Poster Film</string>
+    <string name="text_id">ID :</string>
+    <string name="text_vote_average">Rata-Rata Vote :</string>
+    <string name="text_vote_count">Jumlah Vote :</string>
+    <string name="text_popularity">Popularitas :</string>
+    <string name="text_episode">episode</string>
+    <string name="text_minute">menit</string>
+    <string name="text_favorites">Favorit</string>
+    <string name="text_added_to_favorite">Ditambahkan ke favorit</string>
+    <string name="text_removed_from_favorite">Dihapus dari favorite</string>
+    <string name="text_favorite_not_found">Favorit Tidak Ditemukan</string>
+    <string name="text_search">Cari</string>
+    <string name="text_search_hint">Cari…</string>
+    <string name="text_search_not_found_please_try_another_keyword">Pencarian tidak ditemukan, tolong coba dengan kata kunci lain.</string>
+    <string name="text_select_search_type">Cari tipe pencarian</string>
+    <string name="text_close">Tutup</string>
+    <string name="text_settings">Pengaturan</string>
+    <string name="text_language_title">Bahasa</string>
+    <string name="text_daily_reminder">Pengingat Harian</string>
+    <string name="text_reminder_for_return_to_app">Pengingat untuk kembali ke aplikasi</string>
+    <string name="text_release_reminder">Pengingat Rilis</string>
+    <string name="text_reminder_showing_the_movie_that_release_today">Pengingat film yang rilis hari ini</string>
+    <string name="text_catalogue_movie_missing_you">Movie Catalogue merindukanmu!</string>
+    <string name="text_has_been_release_today">telah dirilis hari ini!</string>
+</resources>

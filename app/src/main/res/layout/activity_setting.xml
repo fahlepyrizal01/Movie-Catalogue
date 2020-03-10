@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.setting.SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSetting"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        app:title="@string/text_settings"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewLanguage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:text="@string/text_language_title"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSetting"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/viewLanguage"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/textViewLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLanguage"
+        app:layout_constraintEnd_toEndOf="@+id/textViewLanguage"/>
+
+    <TextView
+        android:id="@+id/textViewDaily"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:text="@string/text_daily_reminder"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/switchDaily"
+        app:layout_constraintStart_toStartOf="@+id/viewLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/viewLanguage" />
+
+    <TextView
+        android:id="@+id/textViewDailyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:text="@string/text_reminder_for_return_to_app"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDaily"
+        app:layout_constraintStart_toStartOf="@+id/textViewDaily"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDaily" />
+
+    <Switch
+        android:id="@+id/switchDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDailyText"
+        app:layout_constraintEnd_toEndOf="@+id/viewLanguage"
+        app:layout_constraintTop_toTopOf="@+id/textViewDaily"/>
+
+    <View
+        android:id="@+id/viewDaily"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/textViewDailyText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDailyText"
+        app:layout_constraintEnd_toEndOf="@+id/switchDaily"/>
+
+    <TextView
+        android:id="@+id/textViewReleaseToday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:text="@string/text_release_reminder"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/switchReleaseToday"
+        app:layout_constraintStart_toStartOf="@+id/viewDaily"
+        app:layout_constraintTop_toBottomOf="@+id/viewDaily" />
+
+    <TextView
+        android:id="@+id/textViewReleaseTodayText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:text="@string/text_reminder_showing_the_movie_that_release_today"
+        app:layout_constraintEnd_toEndOf="@+id/textViewReleaseToday"
+        app:layout_constraintStart_toStartOf="@+id/textViewReleaseToday"
+        app:layout_constraintTop_toBottomOf="@+id/textViewReleaseToday" />
+
+    <Switch
+        android:id="@+id/switchReleaseToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewReleaseTodayText"
+        app:layout_constraintEnd_toEndOf="@+id/viewDaily"
+        app:layout_constraintTop_toTopOf="@+id/textViewReleaseToday"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

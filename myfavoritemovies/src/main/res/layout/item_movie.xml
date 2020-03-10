@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/size_5dp">
+
+    <ImageView
+        android:id="@+id/imageViewPosterMovie"
+        android:layout_width="@dimen/size_80dp"
+        android:layout_height="@dimen/size_100dp"
+        android:scaleType="centerCrop"
+        tools:src="@tools:sample/avatars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/text_imageview_movie_poster" />
+
+    <TextView
+        android:id="@+id/textViewTitleMovie"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/size_5dp"
+        android:layout_marginEnd="@dimen/size_5dp"
+        tools:text="@tools:sample/lorem"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScoreMovie"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDateMovie"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPosterMovie"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPosterMovie" />
+
+    <TextView
+        android:id="@+id/textViewScoreMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        tools:text="@tools:sample/lorem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitleMovie"/>
+
+
+    <TextView
+        android:id="@+id/textViewDateMovie"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/date/mmddyy"
+        app:layout_constraintBottom_toTopOf="@+id/textViewOverviewMovie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleMovie"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleMovie" />
+
+    <TextView
+        android:id="@+id/textViewOverviewMovie"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        tools:text="@tools:sample/lorem/random"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPosterMovie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleMovie"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateMovie"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
